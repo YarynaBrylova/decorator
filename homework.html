@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Computer {
+            price() {
+                return 1000;
+            }
+        };
+
+        const ssd_512Gb = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 200;
+            
+        };
+
+        const ssd_1Tb = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 350;
+
+        };
+
+
+        //оперативна пам'ять
+        const ram_16Gb = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 150;
+        };
+
+        const ram_32Gb = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 250;
+        };
+
+
+        //відео карта
+        const vga1060Ti = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 500;
+        };
+
+        const vga2080Ti = (computer) => {
+            const price = computer.price();
+            computer.price = () => price + 1000;
+        };
+
+        const computer = new Computer();
+
+        ssd_1Tb(computer);
+        ram_16Gb(computer);
+        vga1060Ti(computer);
+        console.log(computer.price());
+
+    </script>
+</body>
+</html>
